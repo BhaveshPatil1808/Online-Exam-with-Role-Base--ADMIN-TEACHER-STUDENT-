@@ -4,52 +4,69 @@
 [![JDBC](https://img.shields.io/badge/JDBC-Database%20Connectivity-green)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)
 [![Database](https://img.shields.io/badge/Database-MySQL-lightblue?logo=mysql)](https://www.mysql.com/)
 
-A **Console-based Online Exam System** built with **Java, JDBC, and MySQL**.  
-It allows **Students** to take exams, **Teachers** to add/manage questions, and **Admins** to view results and oversee the system.
+A **console-based Online Exam System** built using **Java, JDBC, and MySQL**.
+It allows:
+
+* 👨‍🎓 Students to take exams
+* 👨‍🏫 Teachers to manage questions
+* 👨‍💻 Admins to monitor results
 
 ---
 
 ## 🛠 Tech Stack
-- ☕ **Java 21**
-- 🔗 **JDBC** (Database connectivity)
-- 🗄 **MySQL Database**
-- 🖥 **Console-based UI**
+
+* ☕ Java 21
+* 🔗 JDBC (Database Connectivity)
+* 🗄 MySQL Database
+* 🖥 Console-based UI
 
 ---
 
 ## 📦 Features
-- 👤 **User Registration & Login** (roles: Admin, Teacher, Student)  
-- 📋 **Exam Management** (students can take exams, answers are auto‑evaluated)  
-- ➕ **Question Management** (teachers can add/view questions)  
-- 📊 **Result Tracking** (results saved with score, total questions, date)  
-- 🔐 **Role-based Menus** (different options for Admin, Teacher, Student)  
+
+* 👤 **User Registration & Login** (Admin, Teacher, Student)
+* 📋 **Exam Management** (auto-evaluation of answers)
+* ➕ **Question Management** (add/view questions)
+* 📊 **Result Tracking** (score, total questions, exam date)
+* 🔐 **Role-Based Access Control**
 
 ---
 
 ## ⚙️ Prerequisites
-- Java 21+  
-- MySQL running locally  
-- JDBC driver (MySQL Connector/J)  
+
+* Java 21+
+* MySQL installed and running
+* MySQL Connector/J (JDBC Driver)
 
 ---
 
 ## 🚀 Getting Started
 
-1️⃣ **Clone the repository**
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/BhaveshPatil1808/Online-Exam-System.git
 cd Online-Exam-System
+```
 
+---
 
-## 2️⃣ Configure Database  
-Update DBConnection.java with your DB credentials:
+### 2️⃣ Configure Database
+
+Update `DBConnection.java`:
+
+```java
 String username = "root";
 String password = "yourpassword";
 String url = "jdbc:mysql://localhost:3306/online_exam";
+```
 
-## 3️⃣ Create Database Schema
+---
+
+### 3️⃣ Create Database Schema
+
+```sql
 CREATE DATABASE online_exam;
-
 USE online_exam;
 
 CREATE TABLE users (
@@ -77,38 +94,49 @@ CREATE TABLE results (
   examDate DATE,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+```
 
-## 4️⃣ Compile the project
+---
+
+### 4️⃣ Compile the Project
+
+```bash
 javac -d bin src/com/onlineExam/**/*.java
+```
 
-## 5️⃣ Run the application
+---
+
+### 5️⃣ Run the Application
+
+```bash
 java -cp bin com.onlineExam.Main.MainApp
+```
+
+---
 
 ## 💬 Usage (CLI Menus)
-**👤 Student Menu**
 
-Take Exam
+### 👨‍🎓 Student Menu
 
-View My Results
+* Take Exam
+* View My Results
 
-**👨‍🏫 Teacher Menu**
+### 👨‍🏫 Teacher Menu
 
-Add Question
+* Add Question
+* View All Questions
+* View Results
 
-View All Questions
+### 👨‍💻 Admin Menu
 
-View Results
+* View All Questions
+* View All Results
 
-**👨‍💻 Admin Menu**
-
-View All Questions
-
-View All Results
+---
 
 ## 📂 Project Structure
-## 📁 Project Structure
 
-```
+```bash
 Online-Exam-System/
 │
 ├── com.onlineExam.DAO/           # Data Access Layer (QuestionDAO, ResultDAO, UserDAO)
@@ -118,17 +146,19 @@ Online-Exam-System/
 ├── com.onlineExam.Utility/       # Utility classes (CLI menus, helpers)
 └── com.onlineExam.Main/          # Main application entry point
 ```
+
+---
+
 ## 🚀 Future Improvements
 
-🌐 Add web-based UI (Spring Boot + Thymeleaf)
+* 🌐 Web-based UI (Spring Boot + Thymeleaf)
+* 🔐 Password encryption
+* 📊 Analytics dashboard
+* 🐳 Docker support
+* ⏱ Timed exams & multiple subjects
 
-🔐 Encrypt passwords for security
-
-📊 Add analytics dashboard for results
-
-🐳 Dockerize for deployment
-
-🎯 Add timed exams and multiple subjects
+---
 
 ## 👨‍💻 Author
+
 **Bhavesh Patil**
