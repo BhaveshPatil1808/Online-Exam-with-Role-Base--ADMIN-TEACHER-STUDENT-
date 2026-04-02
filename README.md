@@ -45,8 +45,8 @@ It allows:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/BhaveshPatil1808/Online-Exam-System.git
-cd Online-Exam-System
+[git clone https://github.com/BhaveshPatil1808/Online-Exam-System.git](https://github.com/BhaveshPatil1808/Online-Exam-with-Role-Base--ADMIN-TEACHER-STUDENT-.git)
+
 ```
 
 ---
